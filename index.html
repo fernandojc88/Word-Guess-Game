@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <title>Game</title>
+
+    <style>
+    li {
+      list-style-type: none;
+    }
+
+    .clearfix {
+      overflow: auto;
+    }
+
+    @media screen and (max-width:500px) {
+      .wrapper {
+        max-width: 100%;
+      }
+    }
+    </style>
+  </head>
+  <!-- body = body of the whole page -->
+  <!-- .background image text center CSS-->
+  <body class="background">
+    <!-- .wrapper is font size and color CSS -->
+      <div class="wrapper clearfix" style="background-color:white; width:500px; height:600px; margin:auto; margin-top:2em; margin-bottom:3em; overflow: hidden; padding: 0.5em; padding-bottom:0.3em;">
+        <!-- start of the game -->
+        <section class="start">
+          <!-- div is its own section -->
+            <div>
+              <!-- first word to be seen on page -->
+              <h1>Word Guessing</h1>
+            </div>
+          <!-- section is its own section like div -->
+            <section>
+            <!-- the blanks that need to be filled -->
+            <h3 id="word-blanks">_ _ _ _ _ _ _ _ _ </h3>
+          </section>
+
+          <section>
+            <div class="wrong">
+              <!-- display wrong guesesse "when the wrong key is pressed" -->
+            <strong>Wrong Guesses: </strong> <span id="wrong-guesses"></span>
+            </div>
+            <div class="guesses">
+              <!-- count how many wrong guesses you get -->
+            <strong>Guesses Left: </strong> <span id="guesses-left">10</span>
+            </div>
+            <div class="wins">
+              <!-- how many wins you have -->
+            <strong>Wins: </strong> <span id="win-counter">0</span>
+            </div>
+            <div class="losses">
+              <!-- you lose -->
+            <strong>Losses: </strong> <span id="loss-counter">0</span>
+            </div>
+          </section>
+          
+          <ul>
+            <!-- display the word bank -->
+            <li>touchdown</li><li>football</li><li>flag</li><li>field</li> </ul>
+            <div id="wordDisplay"></div>
+            <div id="again" onclick="reset()">Play again!</div>
+            <!-- <canvas id="hang" width="300px" height="200px">Uh oh, your browser doesn't support HTML5 canvas!</canvas> -->
+          <!-- </div> -->
+        </div>
+      </section>
+    <script type='text/javascript' src="assets/javascript/game.js"></script>
+  </body>
+</html>
